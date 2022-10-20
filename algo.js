@@ -72,3 +72,41 @@ function isThisAnAnagram(str1, str2){
 }
 
 console.log(isThisAnAnagram('aza','zaa'))
+
+
+// _________________________________________
+
+function sameFrequency(num1, num2){
+  str1 = num1.toString()
+  str2 = num2.toString()
+
+  if(str1.length !== str2.length){
+    return false
+  }
+
+  let countStr1 = {}
+  let countStr2 = {}
+
+  for (let i = 0; i < str1.length; i++){
+    if(!countStr1[str1[i]]){
+      countStr1[str1[i]] = 1
+    } else {
+      countStr1[str1[i]] += 1
+    }
+    console.log(countStr1)
+  }  
+
+    for (let i = 0; i < str2.length; i++){
+    countStr2[str2[i]] = (countStr2[str2[i]] || 0 ) + 1 
+      // console.log(countStr2)
+  }  
+  for(let key in countStr1){
+    if(countStr1[key] !== countStr2[key]) return false;
+  }
+ 
+  return true;
+
+  
+}
+
+console.log(sameFrequency(3589578, 5879385))
