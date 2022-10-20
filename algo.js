@@ -133,3 +133,27 @@ function averagePair(arr, num){
 console.log(averagePair([1,3,3,5,6,7,10,12,19],8))
 console.log(averagePair([-1,0,3,4,5,6], 4.1))
 // 
+
+function isSubsequence(str1, str2){
+  let i = 0
+  let j = 0
+  if(!str1){
+    true
+  }
+  while(j < str2.length){
+    if(str1[i]===str2[j]){
+      i++
+    }else if(i === str1.length){
+      return true 
+    }else{
+      j++
+    }
+  }
+  return false
+  
+}
+
+  
+
+
+console.log(isSubsequence('sing', 'sting'))
