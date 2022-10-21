@@ -157,3 +157,21 @@ function isSubsequence(str1, str2){
 
 
 console.log(isSubsequence('sing', 'sting'))
+
+// generateShape function makes a shape using the integer, which determines how many line and how many '+' are in each line 
+// using '\n' made a line break to help make the shape
+// trim method trimmed of the last '\n' in the function
+
+function generateShape(integer){
+
+  let line = ''
+  for (let i = 0; i < integer; i++){
+    for (let j = 0; j < integer; j++){
+      line += '+'
+    }
+    line += '\n'
+  }
+ return line.trim()
+
+}
+
