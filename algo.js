@@ -216,3 +216,21 @@ function maxSubarrySum(arr, num){
 }
 
 
+
+// _________________________________________
+
+function areThereDuplicates() {
+  let holder = {}
+  for(let value in arguments ){
+    if (!holder[arguments[value]]){
+      holder[arguments[value]] = 1
+    } else {
+      holder[arguments[value]] += 1
+    }
+  }
+  for(let key in holder){
+    if(holder[key] > 1) return true
+  }
+  return false;
+}
+console.log(areThereDuplicates(1, 2, 3))
