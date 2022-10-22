@@ -175,3 +175,20 @@ function generateShape(integer){
 
 }
 
+
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+
+
+function solution(str, ending){
+  for(let i = ending.length; i > 0; i--){
+    if (str[str.length - i] == ending[ending.length - i]){
+      console.log(ending[ending.length - i])
+    }else{
+      return false
+    }
+  }
+    
+  }
+
+
