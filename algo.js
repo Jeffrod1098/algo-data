@@ -234,3 +234,26 @@ function areThereDuplicates() {
   return false;
 }
 console.log(areThereDuplicates(1, 2, 3))
+
+// Write a function to help Leo out. The first parameter of the function is Leo's budget; the second one is an array containing the price of each gift.
+// You should return an integer representing the maximum amount of gifts Leo can buy.
+
+function howManyGifts(maxBudget, gifts){
+  gifts = gifts.sort((a,b) => a - b)
+  
+  let giftsTobuy = []
+  let sumOfGifts = 0;
+  
+  for (let i = 0; i < gifts.length; i++) {  
+    if ((sumOfGifts += gifts[i]) <= maxBudget) {   
+      giftsTobuy.push(gifts[i])
+    }
+  }
+
+  return giftsTobuy.length
+}
+
+
+howManyGifts(20, [13, 2, 4, 6, 1])
+
+howManyGifts(0, [1])
