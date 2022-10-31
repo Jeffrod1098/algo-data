@@ -235,7 +235,7 @@ function areThereDuplicates() {
 }
 console.log(areThereDuplicates(1, 2, 3))
 
-// Write a function to help Leo out. The first parameter of the function is Leo's budget; the second one is an array containing the price of each gift.
+// Write a function to help Leo out. The first parameter of the function is Leo budget the second one is an array containing the price of each gift.
 // You should return an integer representing the maximum amount of gifts Leo can buy.
 
 function howManyGifts(maxBudget, gifts){
@@ -257,3 +257,20 @@ function howManyGifts(maxBudget, gifts){
 howManyGifts(20, [13, 2, 4, 6, 1])
 
 howManyGifts(0, [1])
+
+
+
+// Write a function that takes a string and outputs a strings of 1's and 0's where vowels become 1's and non-vowels become 0's.
+
+// All non-vowels including non alpha characters (spaces,commas etc.) should be included.
+
+
+function vowelOne(s){
+  s = s.toLowerCase()
+  const arr = ['a', 'e', 'i', 'o', 'u']
+  let result = ''
+  for (el of s) {
+    arr.includes(el) ? result += '1' : result += '0'
+  }
+  return result
+}
